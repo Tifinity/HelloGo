@@ -15,7 +15,7 @@ steps:
     - yum install -y git
     - yum install -y openssh-clients
     - mkdir $HOME/.ssh
-    - echo -e "$SSH_KEY" > $HOME/.ssh/id_rsa
+    - echo "$SSH_KEY" > $HOME/.ssh/id_rsa
     - chmod 600 $HOME/.ssh/id_rsa
     - touch $HOME/.ssh/known_hosts
     - chmod 600 $HOME/.ssh/known_hosts
@@ -35,7 +35,7 @@ steps:
     - yum install -y git
     - yum install -y openssh-clients
     - mkdir $HOME/.ssh
-    - echo -e "$SSH_KEY" > $HOME/.ssh/id_rsa
+    - echo "$SSH_KEY" > $HOME/.ssh/id_rsa
     - chmod 600 $HOME/.ssh/id_rsa
     - touch $HOME/.ssh/known_hosts
     - chmod 600 $HOME/.ssh/known_hosts
