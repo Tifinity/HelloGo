@@ -20,7 +20,8 @@ steps:
     - touch $HOME/.ssh/known_hosts
     - chmod 600 $HOME/.ssh/known_hosts
     - ssh-keyscan -H github.com > $HOME/.ssh/known_hosts
-    - git clone --recursive git@github.com:Tifinity/HelloGo.git
+    - mkdir clone
+    - git clone --recursive git@github.com:Tifinity/HelloGo.git clone
   when:
     branch:
       - master
@@ -39,10 +40,11 @@ steps:
     - touch $HOME/.ssh/known_hosts
     - chmod 600 $HOME/.ssh/known_hosts
     - ssh-keyscan -H github.com > $HOME/.ssh/known_hosts
-    - git clone --recursive git@github.com:Tifinity/HelloGo.git
+    - mkdir clone2
+    - git clone --recursive git@github.com:Tifinity/HelloGo.git clone2
   when:
     branch:
-    - master
+      - master
 
 - name: test
   image: alpine
